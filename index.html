@@ -8,24 +8,42 @@
 </head>
 <body>
   <header class="hero">
+    <nav class="top-nav" aria-label="主导航">
+      <a href="index.html">官网首页</a>
+      <a href="admin.html">后台发布模拟</a>
+    </nav>
     <h1>塔漠里健康科技</h1>
     <p>科技深耕塔漠锁边，精深加工绿洲珍品</p>
   </header>
 
   <main>
-    <section>
+    <section class="panel">
       <h2>企业介绍</h2>
-      <p>我们专注于新疆沙棘种植、沙漠生态治理与健康产品开发。</p>
+      <p>我们专注于新疆沙棘种植、沙漠生态治理与健康产品开发，以稳健的农业科技能力连接绿洲生态与现代健康消费。</p>
     </section>
 
-    <section>
-      <h2>产品展示</h2>
-      <div id="product-list"></div>
+    <section class="panel">
+      <div class="section-heading">
+        <div>
+          <h2>产品展示</h2>
+          <p class="section-intro">可按产品名称或分类快速筛选，后台新增产品会同步展示在这里。</p>
+        </div>
+        <a class="button-link" href="admin.html">发布新产品</a>
+      </div>
+      <label class="search-label" for="product-search">搜索产品</label>
+      <input
+        id="product-search"
+        class="search-input"
+        type="search"
+        placeholder="输入产品名称或分类，例如：沙棘、健康饮品"
+        autocomplete="off"
+      />
+      <div id="product-list" class="product-grid" aria-live="polite"></div>
     </section>
 
-    <section>
+    <section class="panel">
       <h2>企业资讯</h2>
-      <ul>
+      <ul class="news-list">
         <li>沙棘产业链升级计划启动</li>
         <li>科技治沙示范基地建设推进</li>
       </ul>

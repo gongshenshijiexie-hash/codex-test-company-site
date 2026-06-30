@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>后台发布模拟 - 塔漠里健康科技</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero hero-compact">
+    <nav class="top-nav" aria-label="主导航">
+      <a href="index.html">官网首页</a>
+      <a href="admin.html">后台发布模拟</a>
+    </nav>
+    <h1>后台发布模拟</h1>
+    <p>录入产品信息并保存到本地浏览器，便于演示官网产品更新流程。</p>
+  </header>
+
+  <main>
+    <section class="panel admin-panel">
+      <h2>新增产品</h2>
+      <p class="section-intro">填写后会保存到 localStorage，返回首页即可与默认产品一起查看。</p>
+      <form id="product-form" class="product-form">
+        <label for="product-name">产品名称</label>
+        <input id="product-name" name="name" type="text" placeholder="例如：沙棘果茶" required />
+
+        <label for="product-category">产品分类</label>
+        <input id="product-category" name="category" type="text" placeholder="例如：健康饮品" required />
+
+        <label for="product-description">产品简介</label>
+        <textarea id="product-description" name="description" rows="5" placeholder="简要说明产品特点、原料或适用场景" required></textarea>
+
+        <button type="submit">保存产品</button>
+      </form>
+      <p id="form-message" class="form-message" role="status"></p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
